@@ -30,6 +30,8 @@ endif()
 # ====================================================================================
 cmake_minimum_required(VERSION 3.13)
 
+set(PICO_EXTRAS_PATH ${CMAKE_CURRENT_LIST_DIR}/lib/pico-extras)
+
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
@@ -42,6 +44,9 @@ include(${PICO_SDK_PATH}/pico_sdk_init.cmake)
 
 # This imports the library configuration for FreeRTOS
 include(${FREERTOS_PATH}/portable/ThirdParty/GCC/RP2040/FreeRTOS_Kernel_import.cmake)
+
+# We also need PICO EXTRAS
+include(pico_extras_import.cmake)
 
 # This sets up the unity library. They don't provide a library export, so it's defined locally.
 include(unity.cmake)

@@ -14,3 +14,12 @@
 	path = lib/unity
 	url = git@github.com:ThrowTheSwitch/Unity.git
     ignore = dirty
+[submodule "lib/unity"]
+	path = lib/unity
+	url = git@github.com:ThrowTheSwitch/Unity.git
+[submodule "pico-extras"]
+	path = pico-extras
+	url = git@github.com:raspberrypi/pico-extras.git
+[submodule "lib/pico-extras"]
+	path = lib/pico-extras
+	url = git@github.com:raspberrypi/pico-extras.git
